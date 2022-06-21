@@ -1,0 +1,30 @@
+.col-left {
+  margin-right: 10px;
+}
+
+.col-right {
+  margin-left: 10px;
+}
+
+.slidev-layout.has-logo {
+  background-image: none;
+}
+
+.slidev-vclick-target {
+  transition: unset;
+}
+
+.slidev-layout .footnote-item p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.slidev-layout .footnotes-sep {
+  @apply hidden;
+}
+
+.slidev-layout .footnotes {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 2.5rem
+}

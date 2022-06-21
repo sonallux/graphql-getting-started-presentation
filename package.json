@@ -1,0 +1,18 @@
+{
+  "name": "graphql-getting-started-presentation",
+  "private": true,
+  "scripts": {
+    "build": "slidev build",
+    "dev": "slidev --open",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "@slidev/cli": "^0.33.0",
+    "@slidev/theme-default": "*",
+    "@slidev/theme-seriph": "*",
+    "slidev-theme-datev-scc": "^0.3.5"
+  },
+  "devDependencies": {
+    "@iconify-json/mdi": "^1.1.19"
+  }
+}
