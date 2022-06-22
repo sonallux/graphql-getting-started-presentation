@@ -12,7 +12,7 @@ Getting Started with GraphQL in Spring Boot Applications
   <img src="/Spring_Framework_Logo_2018.svg" alt="Spring Framework">
 </div>
 
-<div class="absolute bottom-0 mb-10"><a href="https://github.com/sonallux"><mdi-github /> github.com/sonallux</a></div>
+<div class="absolute bottom-0 mb-16"><a href="https://github.com/sonallux"><mdi-github /> github.com/sonallux</a></div>
 
 <!--
 - Was ist GraphQL?
