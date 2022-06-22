@@ -263,10 +263,10 @@ disableLogo: true
 
 ```mermaid
 flowchart LR
-  Client --> friends["GET /person/{id_0}/friends"]
-  Client --> posts1["GET /person/{id_1}/posts"]
-  Client --> posts2["GET /person/{id_2}/posts"]
-  Client --> posts3["GET /person/{id_3}/posts"]
+  Client --> friends["GET /person/{id}/friends"]
+  Client --> posts1["GET /person/{friend_1}/posts"]
+  Client --> posts2["GET /person/{friend_2}/posts"]
+  Client --> posts3["GET /person/{friend_3}/posts"]
 ```
 
 ---
@@ -278,10 +278,10 @@ disableLogo: true
 ```mermaid
 flowchart LR
   Client --> GraphQL[GraphQL Engine]
-  GraphQL --> friends["GET /person/{id_0}/friends"]
-  GraphQL --> posts1["GET /person/{id_1}/posts"]
-  GraphQL --> posts2["GET /person/{id_2}/posts"]
-  GraphQL --> posts3["GET /person/{id_3}/posts"]
+  GraphQL --> friends["GET /person/{id}/friends"]
+  GraphQL --> posts1["GET /person/{friend_1}/posts"]
+  GraphQL --> posts2["GET /person/{friend_2}/posts"]
+  GraphQL --> posts3["GET /person/{friend_3}/posts"]
 ```
 
 ---
