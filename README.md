@@ -1,6 +1,8 @@
 # Getting Started with GraphQL in Spring Boot Applications
 
-To start the slide show:
+[View slides online](https://sonallux.github.io/graphql-getting-started-presentation)
+
+To start the slide show locally:
 
 - `npm install`
 - `npm run dev`
