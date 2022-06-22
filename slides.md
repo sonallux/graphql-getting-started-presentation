@@ -1,6 +1,7 @@
 ---
 theme: datev-scc
 layout: intro
+download: true
 ---
 # GraphQL
 
@@ -14,16 +15,22 @@ Getting Started with GraphQL in Spring Boot Applications
 <div class="absolute bottom-0 mb-10"><a href="https://github.com/sonallux"><mdi-github /> github.com/sonallux</a></div>
 
 <!--
-Was ist GraphQL?
-Wie funktioniert GraphQL?
-GraphQL Service mit Spring Boot schreiben
-Vorteile und Nachteile GraphQL
+- Was ist GraphQL?
+- Wie funktioniert GraphQL?
+- GraphQL Service mit Spring Boot schreiben
+- Vorteile und Nachteile GraphQL
 -->
 
 ---
 layout: two-cols
 ---
 # REST API
+
+- `GET /person/{id}` : `Person`
+- `GET /person/{id}/friends` : `Person[]`
+- `GET /person/{id}/posts` : `Post[]`
+
+<br>
 
 ```ts
 interface Person {
@@ -41,11 +48,6 @@ interface Post {
   likes: number
 }
 ```
-
-Endpoints:
-- `GET /person/{id}` : `Person`
-- `GET /person/{id}/friends` : `Person[]`
-- `GET /person/{id}/posts` : `Post[]`
 
 ::right::
 <div v-click>
@@ -70,6 +72,7 @@ Endpoints:
 
 <!--
 jeden Endpunkt einmal aufrufen
+<br>
 overfetching:
 - von freunden wird nur `name` benötigt
 - von posts wird nur `title` und `likes` benötigt
@@ -79,6 +82,12 @@ overfetching:
 layout: two-cols
 ---
 # REST API
+
+- `GET /person/{id}` : `Person`
+- `GET /person/{id}/friends` : `Person[]`
+- `GET /person/{id}/posts` : `Post[]`
+
+<br>
 
 ```ts
 interface Person {
@@ -96,11 +105,6 @@ interface Post {
   likes: number
 }
 ```
-
-Endpoints:
-- `GET /person/{id}` : `Person`
-- `GET /person/{id}/friends` : `Person[]`
-- `GET /person/{id}/posts` : `Post[]`
 
 ::right::
 <div v-click>
@@ -124,12 +128,10 @@ Liste mit Posts der Freunde
 
 <!--
 N + 1 Problem
-1. einmal `GET /person/{id}/friends` um alle Freunde abzufragen
-2. pro Freund `GET /person/{id}/posts` um die jeweiligen Posts abzufragen
+- 1. einmal `GET /person/{id}/friends` um alle Freunde abzufragen
+- 2. pro Freund `GET /person/{id}/posts` um die jeweiligen Posts abzufragen
 -->
 
----
-disableLogo: true
 ---
 
 # GraphQL
@@ -143,8 +145,6 @@ disableLogo: true
 
 [^1]: https://spec.graphql.org
 
----
-disableLogo: true
 ---
 
 # Schema
@@ -192,13 +192,11 @@ layout: center
 # Demo
 
 <!--
-GraphiQL: "Swagger UI für GraphQL"
-Query, Mutation und Subscription in GraphiQL zeigen
-Mapping auf HTTP zeigen, Query in Postman absetzen
+- GraphiQL: "Swagger UI für GraphQL"
+- Query, Mutation und Subscription in GraphiQL zeigen
+- Mapping auf HTTP zeigen, Query in Postman absetzen
 -->
 
----
-disableLogo: true
 ---
 
 # GraphQL over HTTP [^1]
@@ -209,15 +207,13 @@ disableLogo: true
 <br>
 <br>
 
-- `POST /graphql` mit JSON Body, der den GraphQL Query als String unter dem Key `query` enthält
-- `GET /graphql` mit Queryparameter `query`, der den GraphQL Query als String enthält
+- `POST /graphql` mit JSON Body, der die Query oder Mutation als String unter dem Key `query` enthält
+- `GET /graphql` mit Queryparameter `query`, der die Query als String enthält
 - Anwort jeweils ein JSON mit `data` und `errors` Key
 
 
 [^1]: https://github.com/graphql/graphql-over-http
 
----
-disableLogo: true
 ---
 
 # GraphQL in der Java Welt
@@ -256,8 +252,6 @@ layout: center
 # Live Coding
 
 ---
-disableLogo: true
----
 
 # N+1 Problem
 
@@ -269,8 +263,6 @@ flowchart LR
   Client --> posts3["GET /person/{friend_3}/posts"]
 ```
 
----
-disableLogo: true
 ---
 
 # N+1 Problem
@@ -284,8 +276,6 @@ flowchart LR
   GraphQL --> posts3["GET /person/{friend_3}/posts"]
 ```
 
----
-disableLogo: true
 ---
 
 <div class="mb-8">
@@ -310,7 +300,7 @@ layout: two-cols
 - viele (unbekannte) Clients, die jeweils anderen Sichten auf die Daten benötigen
 - Schema Validierung
 - Starke Typisierung
-- Ideal für reaktive Anwendungen wegen Subscriptions
+- Built-in Subscriptions
 
 ::right::
 
@@ -319,11 +309,11 @@ layout: two-cols
 - HTTP Status Codes und Caching Mechanismen können nicht verwendet werden
 
 <!--
-GraphQL ohne Subscription kann nicht mehr als REST mit Schema (OpenAPI/Swagger), Validierung, Sichten über Queryparameter. GraphQL kann es nur "out of the box"
+GraphQL ohne Subscription kann nicht mehr als REST mit Schema (OpenAPI/Swagger), Validierung, Sichten über Queryparameter. 
+
+GraphQL kann es nur "out of the box"
 -->
 
----
-disableLogo: true
 ---
 
 # Fragen ?
